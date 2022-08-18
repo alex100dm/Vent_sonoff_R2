@@ -204,10 +204,9 @@ void Get_temp() {
 
 void LedIdicator(){
 	static uint8_t count;
-
 	if ( millis() - timer_led_idic >= 100 ) {
 		timer_led_idic = millis();
-		if ( ++count > 30 ) {
+		if ( ++count > 40 ) {
 			count = 0;
 			digitalWrite( LED_PIN, LED_ON ); // on
 		}
@@ -247,9 +246,10 @@ void ConnectWifi() {
 	WiFi.mode(WIFI_STA);	
 	WiFi.begin( var.ssid , var.pass );
 	my_print(F("WIFI_STA connect"));
-	for (uint8_t i=0; i< 250; i++) {
+	for (uint8_t i=0; i <= 250; i++) {
 		if (WiFi.status() == WL_CONNECTED) break;
-		my_print( F(".") ); delay(200); digitalWrite( LED_PIN,  !digitalRead( LED_PIN ) );
+		my_print( F(".") ); delay(100); 
+		digitalWrite( LED_PIN,  !digitalRead( LED_PIN ) );
 		user_app();	
 	}
 	if (WiFi.status() == WL_CONNECTED) {
@@ -332,7 +332,9 @@ void build() {// билдер страницы
 	if (portal.uri() == "/seting") {
 		GP.TITLE( "Настройки" );
 		GP.HR();
-		GP.AJAX_UPDATE(PSTR("timer,hc,tc,gh,gt") );
+		GP.AJAX_UPDATE(PSTR("t,h,timer,hc,tc,gh,gt") );
+		GP.LABEL("Сейчас :");		GP.LABEL("NAN", "t");		GP.LABEL("°C  ");  
+		GP.LABEL("NAN", "h");   GP.LABEL("%");   GP.BREAK(); GP.BREAK(); 
 		GP.LABEL("Режим работы вытяжки: "); GP.BREAK();
 		GP.SELECT("sel", SELECT_REGIM, var.regim_vent);	GP.BREAK(); GP.BREAK();
 		GP.LABEL("Таймер выключения:"); GP.LABEL("", "timer"); GP.LABEL("сек:"); GP.BREAK();
@@ -348,7 +350,7 @@ void build() {// билдер страницы
 		
 		GP.BUTTON_MINI("btn", "Сохранить в EEPROM"); GP.BREAK();GP.BREAK();
 		GP.HR();
-		GP.BUTTON_LINK("/connect", "настроки WIFI и прочее"); GP.BREAK();
+		GP.BUTTON_LINK("/connect", "Настроки WIFI и прочее"); GP.BREAK();
 		GP.BUTTON_LINK("/", "На главную страницу");// GP.BUTTON_MINI("btn", "Сохранить");
 	} else 
 	if (portal.uri() == "/connect") { // Подключения
@@ -390,10 +392,9 @@ void build() {// билдер страницы
 		GP.TITLE( "Умная вентиляция" );
 		GP.HR();
 		GP.AJAX_UPDATE(PSTR("led_motor,t,h,sw,timer,hc,tc,gh,gt"), 1000 );
-		
-		// GP.LABEL("Температура: ");		GP.LABEL("NAN", "t");		GP.LABEL("°C");  GP.BREAK();GP.LABEL("Влажность: ");	
-		GP.LABEL("СЕЙЧАС:");		GP.LABEL("NAN", "t");		GP.LABEL("°C  ");  
-		GP.LABEL("NAN", "h");   GP.LABEL("%");   GP.BREAK(); GP.BREAK(); 
+		GP.LABEL("Сейчас :");	  GP.BREAK();
+		GP.LABEL("Температура: ");		GP.LABEL("NAN", "t");		GP.LABEL("°C");  GP.BREAK();
+		GP.LABEL("Влажность: ");			GP.LABEL("NAN", "h");   GP.LABEL("%");   GP.BREAK(); GP.BREAK(); 
 		GP.LED_GREEN("led_motor");  GP.BREAK();  GP.BREAK();  //		GP.BREAK();GP.LED_GREEN("led_svet"); GP.LED_RED("led_motor");
 		GP.LABEL("Режим работы вытяжки: "); GP.BREAK();
 		switch ( var.regim_vent ) { //
