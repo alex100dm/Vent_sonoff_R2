@@ -24,6 +24,63 @@
   
 </details>
 
+##  WEB интерфейс управлния 
+<details>
+<summary>Авторизация</summary>
+  
+![Screenshot_Chrome_0](/jpg/Screenshot_Chrome_0.png)
+  
+</details>
+
+<details>
+<summary>Авторизация</summary>
+  
+![](/jpg/Screenshot_Chrome_0.png)
+  
+</details>
+
+<details>
+<summary>Главная страница (режим ручное управление, вентиляция выключена)</summary>
+  
+![](/jpg/Screenshot_Chrome_1.png)
+  
+</details>
+
+<details>
+<summary>Главная страница (режим ручное управление, вентиляция включена)</summary>
+  
+![](/jpg/Screenshot_Chrome_2.png)
+  
+</details>
+
+<details>
+<summary>Страница Настройки</summary>
+  
+![](/jpg/Screenshot_Chrome_3.png)
+  
+</details>
+
+<details>
+<summary>Страница Настройки - выбор режима работы вытяжки</summary>
+  
+![](/jpg/Screenshot_Chrome_4.png)
+  
+</details>
+
+<details>
+<summary>Страница настроек WI-FI и прочего</summary>
+  
+![](/jpg/Screenshot_Chrome_5.png)
+  
+</details>
+
+<details>
+<summary>Страница настроек WI-FI и прочего - выбор режима работы WI-FI</summary>
+  
+![](/jpg/Screenshot_Chrome_6.png)
+  
+</details>
+
 ##  Версии 
 - v.0.1 - датчик только DHT11.  MODE_AP_DEFAULT - "Вентиляция",  MODE_AP_USER - собственная настройка SSID и PASS WI-FI,	MODE_STA - одключение к локальной сети
 - v.0.2 - поддержка I2C датчика тепературы и влажности AHT10
