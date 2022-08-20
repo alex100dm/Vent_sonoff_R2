@@ -25,59 +25,43 @@
 </details>
 
 ##  WEB интерфейс управлния 
-<details>
-<summary>Авторизация</summary>
-  
-![Screenshot_Chrome_0](/jpg/Screenshot_Chrome_0.png)
-  
-</details>
 
 <details>
 <summary>Авторизация</summary>
   
-![](/jpg/Screenshot_Chrome_0.png)
+<p align="center">
+  <img src="/jpg/Screenshot_Chrome_0.png" width="300px"/>
+</p>
   
 </details>
 
 <details>
-<summary>Главная страница (режим ручное управление, вентиляция выключена)</summary>
+<summary>Главная страница (режим ручное управление, вентиляция выключена/включена)</summary>
   
-![](/jpg/Screenshot_Chrome_1.png)
-  
-</details>
-
-<details>
-<summary>Главная страница (режим ручное управление, вентиляция включена)</summary>
-  
-![](/jpg/Screenshot_Chrome_2.png)
-  
-</details>
-
-<details>
-<summary>Страница Настройки</summary>
-  
-![](/jpg/Screenshot_Chrome_3.png)
+<p align="center">
+  <img src="/jpg/Screenshot_Chrome_1.png" width="300px"/>
+  <img src="/jpg/Screenshot_Chrome_2.png" width="300px"/>
+</p>
   
 </details>
 
 <details>
 <summary>Страница Настройки - выбор режима работы вытяжки</summary>
   
-![](/jpg/Screenshot_Chrome_4.png)
-  
-</details>
+<p align="center">
+  <img src="/jpg/Screenshot_Chrome_3.png" width="300px"/>
+  <img src="/jpg/Screenshot_Chrome_4.png" width="300px"/>
+</p>
 
-<details>
-<summary>Страница настроек WI-FI и прочего</summary>
-  
-![](/jpg/Screenshot_Chrome_5.png)
-  
 </details>
 
 <details>
 <summary>Страница настроек WI-FI и прочего - выбор режима работы WI-FI</summary>
   
-![](/jpg/Screenshot_Chrome_6.png)
+<p align="center">
+  <img src="/jpg/Screenshot_Chrome_5.png" width="300px"/>
+  <img src="/jpg/Screenshot_Chrome_6.png" width="300px"/>
+</p>
   
 </details>
 
